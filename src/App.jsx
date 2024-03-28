@@ -1,10 +1,10 @@
+import Nav from "./components/Nav";
+
 function App() {
   return (
-    <>
-      <p className="flex px-4 text-2xl font-bold uppercase text-green-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sit?
-      </p>
-    </>
+    <div className="md:px24 bg-slate-100 p-4 sm:px-14">
+      <Nav />
+    </div>
   );
 }
 
