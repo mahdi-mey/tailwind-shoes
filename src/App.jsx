@@ -5,6 +5,7 @@ import NewArrivalsSection from "./components/NewArrivalsSection";
 import ShoeDetail from "./components/ShoeDetail";
 import Sidebar from "./components/Sidebar";
 import { SHOE_LIST } from "./constant";
+import { CartItem } from "./components/CartItem";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -14,7 +15,10 @@ function App() {
       <ShoeDetail />
       <NewArrivalsSection items={SHOE_LIST} />
       <Sidebar sidebarStatus={isSidebarOpen} sidebarSetter={setIsSidebarOpen}>
-        hi
+        <h2 className="text-2xl font-bold mb-10">Cart</h2>
+        <CartItem item={SHOE_LIST[0]}/>
+        <CartItem item={SHOE_LIST[3]}/>
+        <CartItem item={SHOE_LIST[2]}/>
       </Sidebar>
     </div>
   );
