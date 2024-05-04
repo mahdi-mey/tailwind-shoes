@@ -2,7 +2,7 @@ import Select  from "./Select";
 import { CiTrash } from "react-icons/ci";
 import { QTY, SIZES } from "../constant";
 
-export function CartItem({ item, qty, size }) {
+export function CartItem({ item, qty , size }) {
   return (
     <div className=" cursor-pointer bg-gray-50 p-2 hover:bg-[#DAFFA2]">
       <div>
@@ -24,12 +24,12 @@ export function CartItem({ item, qty, size }) {
             {/* QTY input */}
             <div className="mt-2 space-y-1">
               <div className="font-bold">QTY</div>
-              <Select title={qty} options={QTY} />
+              <Select title='SIZES' options={QTY} />
             </div>
             {/* SIZE input */}
             <div className="mt-2 space-y-1">
               <div className="font-bold">SIZE</div>
-              <Select title={size} options={SIZES} />
+              <Select title='QTY' options={SIZES} />
             </div>
           </div>
           {/* Trash icon */}
