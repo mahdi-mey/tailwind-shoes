@@ -29,12 +29,12 @@ function App() {
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
-    <div className="md:px24 animate-fadeIn bg-slate-100 p-4 sm:px-14">
+    <div className="md:px24 animate-fadeIn bg-slate-100 p-4 sm:px-14 dark:bg-night-50">
       <Nav sidebarSetter={setIsSidebarOpen} />
       <ShoeDetail />
       <NewArrivalsSection items={SHOE_LIST} />
       <Sidebar sidebarStatus={isSidebarOpen} sidebarSetter={setIsSidebarOpen}>
-        <h2 className="mb-10 text-2xl font-bold">Cart</h2>
+        <h2 className="mb-10 text-2xl font-bold dark:text-white">Cart</h2>
         <CartItem item={SHOE_LIST[0]} />
         <CartItem item={SHOE_LIST[3]} />
         <CartItem item={SHOE_LIST[2]} />

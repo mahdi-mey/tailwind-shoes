@@ -2,7 +2,7 @@ export default function Sidebar({ children, sidebarStatus, sidebarSetter }) {
   return (
     <>
       <div
-        className={`translate fixed right-0 top-0 z-50 h-full w-full overflow-y-scroll bg-blue-300 p-8 shadow-lg transition md:w-1/2 lg:w-1/3 ${sidebarStatus ? "translate-x-0" : "translate-x-full"}`}
+        className={`dark:bg-night-50 translate fixed right-0 top-0 z-50 h-full w-full overflow-y-scroll bg-blue-300 p-8 shadow-lg transition md:w-1/2 lg:w-1/3 ${sidebarStatus ? "translate-x-0" : "translate-x-full"}`}
       >
         <button
           onClick={() => sidebarSetter(false)}

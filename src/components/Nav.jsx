@@ -11,13 +11,13 @@ export default function Nav({ sidebarSetter }) {
     <nav className="relative z-10 flex flex-wrap items-center justify-between">
       {/* Logo */}
       <a href="#">
-        <NikeLogo className="h-20 w-20" />
+        <NikeLogo className="h-20 w-20 dark:fill-white" />
       </a>
 
       {/* Burger button */}
       <button
         onClick={() => setIsMobileMenuShown(!isMobileMenuShown)}
-        className="rounded-lg p-2 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 md:hidden"
+        className="rounded-lg p-2 hover:bg-gray-100 focus:ring-2 focus:ring-gray-200 md:hidden dark:text-gray-300 dark:hover:bg-gray-500"
       >
         <RxHamburgerMenu size={25} />
       </button>
@@ -28,7 +28,7 @@ export default function Nav({ sidebarSetter }) {
           isMobileMenuShown === false && "hidden"
         } w-full md:block md:w-auto`}
       >
-        <ul className="flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 text-lg md:flex-row md:space-x-8 md:border-none md:bg-transparent">
+        <ul className="flex lg:dark:text-white flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 text-lg md:flex-row md:space-x-8 md:border-none md:bg-transparent">
           {ROUTES.map((route, i) => {
             return (
               <li

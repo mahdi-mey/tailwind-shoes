@@ -3,7 +3,7 @@ import Select from "./Select";
 
 export default function ShoeDetail() {
   return (
-    <div className="flex flex-col space-y-4 md:flex-row-reverse">
+    <div className="flex flex-col space-y-4 md:flex-row-reverse dark:text-white">
       {/* Shoe image */}
       <div className="flex-1 md:-mt-32 md:ml-28">
         <div className="flex-center h-full bg-gradient-to-br from-[#F637CF] from-5% via-[#E3D876] via-40% to-[#4DD4C6]">
@@ -28,7 +28,7 @@ export default function ShoeDetail() {
 
         {/* Shoe buttons and links */}
         <div className="space-x-10">
-          <button className="h-14 w-44 bg-black text-white hover:bg-gray-900 active:bg-gray-700 btn-press-anim">
+          <button className="h-14 w-44 dark:bg-white dark:text-black bg-black text-white hover:bg-gray-900 active:bg-gray-700 btn-press-anim">
             Add to bag
           </button>
           <a

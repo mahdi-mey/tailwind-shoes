@@ -4,7 +4,7 @@ export default function NewArrivalsSection({ items }) {
   return (
     <div className="mt-20">
       <div className='flex-center"'>
-        <div className="bg-[url('./assets/lines.png')] bg-center text-center text-2xl font-extrabold">
+        <div className="bg-[url('./assets/lines.png')] dark:text-white bg-center text-center text-2xl font-extrabold">
           NEW ARRIVALS
         </div>
       </div>

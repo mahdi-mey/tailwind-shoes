@@ -4,18 +4,18 @@ import { QTY, SIZES } from "../constant";
 
 export function CartItem({ item, qty , size }) {
   return (
-    <div className=" cursor-pointer bg-gray-50 p-2 hover:bg-[#DAFFA2]">
+    <div className="cursor-pointer bg-gray-50 p-2 hover:bg-[#DAFFA2] dark:bg-transparent dark:hover:bg-gray-700">
       <div>
-        <div className="flex  space-x-2  ">
+        <div className="flex space-x-2 ">
           {/* Image */}
           <img className="h-24" src={item.src} />
           {/* Title and description */}
           <div className="space-y-2">
-            <div className="font-bold">{item.title}</div>
+            <div className="font-bold dark:text-white">{item.title}</div>
             <div className="text-sm text-gray-400">{item.description}</div>
           </div>
           {/* price */}
-          <div className="font-bold">{item.price}$</div>
+          <div className="font-bold dark:text-white">{item.price}$</div>
         </div>
 
         <div className="flex justify-between gap-2 pl-32">
@@ -23,18 +23,18 @@ export function CartItem({ item, qty , size }) {
           <div className="flex space-x-6">
             {/* QTY input */}
             <div className="mt-2 space-y-1">
-              <div className="font-bold">QTY</div>
-              <Select title='SIZES' options={QTY} />
+              <div className="font-bold dark:text-white">QTY</div>
+              <Select title="SIZES" options={QTY} />
             </div>
             {/* SIZE input */}
             <div className="mt-2 space-y-1">
-              <div className="font-bold">SIZE</div>
-              <Select title='QTY' options={SIZES} />
+              <div className="font-bold dark:text-white">SIZE</div>
+              <Select title="QTY" options={SIZES} />
             </div>
           </div>
           {/* Trash icon */}
           <button className="flex-center mt-6">
-            <CiTrash size={25} className="text-black" />
+            <CiTrash size={25} className="text-black dark:text-white" />
           </button>
         </div>
       </div>
