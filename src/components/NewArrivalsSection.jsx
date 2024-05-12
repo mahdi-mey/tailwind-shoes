@@ -1,4 +1,4 @@
-import Cart from "./Cart";
+import Card from "./Card";
 
 export default function NewArrivalsSection({ items, onClickCard }) {
   return (
@@ -10,7 +10,7 @@ export default function NewArrivalsSection({ items, onClickCard }) {
       </div>
       <div className="mt-10 grid grid-cols-1 justify-center gap-x-6 gap-y-16 md:grid-cols-2 xl:grid-cols-3">
         {items.map((item) => (
-          <Cart key={item.id} item={item} onClick={onClickCard} />
+          <Card key={item.id} item={item} onClick={onClickCard} />
         ))}
       </div>
     </div>
