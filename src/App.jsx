@@ -11,9 +11,9 @@ import { CartItem } from "./components/CartItem"
 import { SHOE_LIST } from "./constant"
 
 function App() {
-  console.log(SHOE_LIST[0])
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [currentShoe, setCurrentShoe] = useState(SHOE_LIST[1])
+  const [cartItmes, setCartItems] = useState([])
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("isDarkMode")
@@ -29,16 +29,33 @@ function App() {
     }
   }
 
+  const addToCart = (product, qty, size) => {
+    if (qty && size) {
+      const updatedCartItems = [...cartItmes]
+      const existingItemIndex = cartItmes.findIndex(item => item.id === product.id)
+      if (existingItemIndex > -1) {
+        updatedCartItems[existingItemIndex].qty = qty
+        updatedCartItems[existingItemIndex].size = size
+      }
+      else {
+        updatedCartItems.push({product, qty, size})
+      }
+
+      setCartItems(updatedCartItems)
+    }
+    console.log(cartItmes)
+  }
+
   return (
     <div className="md:px24 animate-fadeIn bg-slate-100 p-4 dark:bg-night-50 sm:px-14">
       <Nav sidebarSetter={setIsSidebarOpen} />
-      <ShoeDetail shoe={currentShoe} />
+      <ShoeDetail shoe={currentShoe} onClickAdd={addToCart} />
       <NewArrivalsSection items={SHOE_LIST} onClickCard={setCurrentShoe} />
       <Sidebar sidebarStatus={isSidebarOpen} sidebarSetter={setIsSidebarOpen}>
         <h2 className="mb-10 text-2xl font-bold dark:text-white">Cart</h2>
-        <CartItem item={SHOE_LIST[0]} />
-        <CartItem item={SHOE_LIST[3]} />
-        <CartItem item={SHOE_LIST[2]} />
+        <CartItem item={cartItmes} />
+        <CartItem item={cartItmes} />
+        <CartItem item={cartItmes} />
       </Sidebar>
 
       {/* toggle dark mode */}
