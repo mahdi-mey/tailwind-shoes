@@ -9,11 +9,12 @@ import Sidebar from "./components/Sidebar"
 import { CartItem } from "./components/CartItem"
 
 import { SHOE_LIST } from "./constant"
+import { Cart } from "./components/Cart"
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [currentShoe, setCurrentShoe] = useState(SHOE_LIST[1])
-  const [cartItmes, setCartItems] = useState([])
+  const [cartItems, setCartItems] = useState([])
 
   useEffect(() => {
     const isDarkMode = localStorage.getItem("isDarkMode")
@@ -31,8 +32,8 @@ function App() {
 
   const addToCart = (product, qty, size) => {
     if (qty && size) {
-      const updatedCartItems = [...cartItmes]
-      const existingItemIndex = cartItmes.findIndex(item => item.id === product.id)
+      const updatedCartItems = [...cartItems]
+      const existingItemIndex = cartItems.findIndex(item => item.id === product.id)
       if (existingItemIndex > -1) {
         updatedCartItems[existingItemIndex].qty = qty
         updatedCartItems[existingItemIndex].size = size
@@ -43,7 +44,7 @@ function App() {
 
       setCartItems(updatedCartItems)
     }
-    console.log(cartItmes)
+    console.log(cartItems)
   }
 
   return (
@@ -51,11 +52,18 @@ function App() {
       <Nav sidebarSetter={setIsSidebarOpen} />
       <ShoeDetail shoe={currentShoe} onClickAdd={addToCart} />
       <NewArrivalsSection items={SHOE_LIST} onClickCard={setCurrentShoe} />
-      <Sidebar sidebarStatus={isSidebarOpen} sidebarSetter={setIsSidebarOpen}>
+      {/* <Sidebar sidebarStatus={isSidebarOpen} sidebarSetter={setIsSidebarOpen}>
         <h2 className="mb-10 text-2xl font-bold dark:text-white">Cart</h2>
-        <CartItem item={cartItmes} />
-        <CartItem item={cartItmes} />
-        <CartItem item={cartItmes} />
+        <CartItem item={cartItems} />
+        <CartItem item={cartItems} />
+        <CartItem item={cartItems} />
+      </Sidebar> */}
+
+      <Sidebar
+        sidebarStatus={isSidebarOpen}
+        sidebarSetter={setIsSidebarOpen}
+      >
+        <Cart cartItems={cartItems} />
       </Sidebar>
 
       {/* toggle dark mode */}

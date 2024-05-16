@@ -23,8 +23,8 @@ export default function ShoeDetail({ shoe, onClickAdd }) {
             {shoe.price} $
           </div>
 
-          <Select onChange={(qty) => setForm({...form, qty})} title="QTY" options={[41, 42, 43, 44, 45]} />
-          <Select onChange={(size) => setForm({...form, size})} title="SIZE" options={[1, 2, 3, 4, 5]} />
+          <Select value={form.qty} onChange={(qty) => setForm({...form, qty})} title="QTY" options={[41, 42, 43, 44, 45]} />
+          <Select value={form.size} onChange={(size) => setForm({...form, size})} title="SIZE" options={[1, 2, 3, 4, 5]} />
         </div>
 
         {/* Shoe buttons and links */}

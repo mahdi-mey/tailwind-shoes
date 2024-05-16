@@ -24,12 +24,12 @@ export function CartItem({ item, qty , size }) {
             {/* QTY input */}
             <div className="mt-2 space-y-1">
               <div className="font-bold dark:text-white">QTY</div>
-              <Select title="SIZES" options={QTY} />
+              <Select title="SIZES" options={QTY} value={qty} />
             </div>
             {/* SIZE input */}
             <div className="mt-2 space-y-1">
               <div className="font-bold dark:text-white">SIZE</div>
-              <Select title="QTY" options={SIZES} />
+              <Select title="QTY" options={SIZES} value={size} />
             </div>
           </div>
           {/* Trash icon */}
