@@ -50,7 +50,6 @@ export default function Nav({ sidebarSetter }) {
       <div
         onClick={() => {
           sidebarSetter(true)
-          console.log('clicked')
         }
       }
         className="fixed bottom-4 left-4 md:static md:mr-8"
