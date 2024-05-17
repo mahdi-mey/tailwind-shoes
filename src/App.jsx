@@ -44,7 +44,6 @@ function App() {
 
       setCartItems(updatedCartItems)
     }
-    console.log(cartItems)
   }
 
   return (
@@ -52,12 +51,6 @@ function App() {
       <Nav sidebarSetter={setIsSidebarOpen} />
       <ShoeDetail shoe={currentShoe} onClickAdd={addToCart} />
       <NewArrivalsSection items={SHOE_LIST} onClickCard={setCurrentShoe} />
-      {/* <Sidebar sidebarStatus={isSidebarOpen} sidebarSetter={setIsSidebarOpen}>
-        <h2 className="mb-10 text-2xl font-bold dark:text-white">Cart</h2>
-        <CartItem item={cartItems} />
-        <CartItem item={cartItems} />
-        <CartItem item={cartItems} />
-      </Sidebar> */}
 
       <Sidebar
         sidebarStatus={isSidebarOpen}

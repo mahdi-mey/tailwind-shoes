@@ -3,6 +3,7 @@ import { CiTrash } from "react-icons/ci"
 import { QTY, SIZES } from "../constant"
 
 export function CartItem({ item, qty, size }) {
+  console.log(item)
 
   return (
     <div className="cursor-pointer bg-gray-50 p-2 hover:bg-[#DAFFA2] dark:bg-transparent dark:hover:bg-gray-700">
@@ -25,12 +26,12 @@ export function CartItem({ item, qty, size }) {
             {/* QTY input */}
             <div className="mt-2 space-y-1">
               <div className="font-bold dark:text-white">QTY</div>
-              <Select title="SIZES" options={QTY} value={qty} />
+              <Select title="SIZES" options={QTY} value={item.qty} />
             </div>
             {/* SIZE input */}
             <div className="mt-2 space-y-1">
               <div className="font-bold dark:text-white">SIZE</div>
-              <Select title="QTY" options={SIZES} value={size} />
+              <Select title="QTY" options={SIZES} value={item.size} />
             </div>
           </div>
           {/* Trash icon */}
