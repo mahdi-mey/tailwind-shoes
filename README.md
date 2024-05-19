@@ -1,8 +1,13 @@
-# React + Vite
+# Tailwind Shoes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project, Tailwind Shoes, is a shoe shop landing page built with Tailwind CSS and React. It features a selection of shoes with the ability to choose size and quantity, as well as an “add to cart” feature.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Selection of shoes
+- Size and quantity selection
+- Add to cart feature
+- Responsive design
+
+## Credits
+This project was built by following a tutorial by _Codiku_. You can find more of Codiku’s work on [github](https://github.com/codiku).
