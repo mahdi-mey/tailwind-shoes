@@ -11,3 +11,5 @@ This project, Tailwind Shoes, is a shoe shop landing page built with Tailwind CS
 
 ## Credits
 This project was built by following a tutorial by _Codiku_. You can find more of Codiku’s work on [github](https://github.com/codiku).
+
+### [View Online](https://mahdi-mey.github.io/tailwind-shoes/)
